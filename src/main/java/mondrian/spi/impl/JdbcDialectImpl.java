@@ -1140,6 +1140,7 @@ public class JdbcDialectImpl implements Dialect {
             return Datatype.Numeric;
         case Types.CHAR:
         case Types.VARCHAR:
+        case Types.NVARCHAR:
             return Datatype.String;
         case Types.TIME:
             return Datatype.Time;
