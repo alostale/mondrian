@@ -489,7 +489,7 @@ public class SqlStatement implements DBStatement {
      */
     public ResultSet getWrappedResultSet() {
         return (ResultSet) Proxy.newProxyInstance(
-            null,
+            SqlStatement.class.getClassLoader(),
             new Class<?>[] {ResultSet.class},
             new MyDelegatingInvocationHandler(this));
     }
